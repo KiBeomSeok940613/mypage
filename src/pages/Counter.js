@@ -3,7 +3,7 @@ import { faEye, faFontAwesome, faHeart, faLocation, faStar } from "@fortawesome/
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
-import { styled } from "styled-components";
+import { createGlobalStyle, styled } from "styled-components";
 
 
 const BgImg = styled.div`
@@ -14,7 +14,8 @@ const BgImg = styled.div`
   width: 300px;
   height: 500px;
   margin: 200px auto;
-  /* filter: grayscale(100%); */
+  
+  
 `
 const MarginPage = styled.div`
   padding-top: 200px
@@ -28,10 +29,11 @@ const FlexMode = styled.div`
  align-items: start;
  white-space: nowrap;
  margin-left: 10px;
- h3{
+ 
+  h3{
   font-size: 30px;
   font-weight: bold;
-  padding-top: 10px;
+  padding-top: 50px;
  }
  span{
   line-height: 60%;
@@ -39,7 +41,9 @@ const FlexMode = styled.div`
 `
 const SpanFLex = styled.div `
   display: flex;
-  column-gap: 5px;
+  column-gap: 10px;
+  padding-top: 10px
+  ;
   
 `
 const FootFlex = styled.div`
@@ -47,17 +51,19 @@ const FootFlex = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    line-height: 10px;
-    padding: 0 20px 0 5px;
+    
+    
 span{
-  padding-top: 20px;
+  
   margin-top: 20px;
-  text-align: center;
-  letter-spacing: -0.5px;
+  
+  line-height: 10px;
+  
+  
 }
 p{
   font-size: 26px;
-  margin-bottom: 5px;
+  margin-top: 20px;
   line-height: 10px;
   font-weight: bold;
   text-align: center;
@@ -107,21 +113,21 @@ function Counter() {
               
               <h3>Neel Litoriya</h3>
             <SpanFLex>
-              <FontAwesomeIcon icon={faHeart} style={{color :'hotpink'}} size="sm" /><span>photographer</span>  
-            </SpanFLex> 
+              <FontAwesomeIcon icon={faHeart} size="sm" color="#C91919"/><span>photographer</span>  
+            </SpanFLex>
               <NavLink><AddButton>+ Add</AddButton></NavLink>
             <SpanFLex>
               <FontAwesomeIcon icon={faLocation} size="sm" color="c9c9c9" />         
               <span>Indore, india</span>
-             </SpanFLex>
+            </SpanFLex>
             
         </FlexMode>
         
         
               <FootFlex>
-                <FontAwesomeIcon icon={faEye} size="sm" color="c9c9c9" /><span>views <br /><p>624</p> </span>
-                <FontAwesomeIcon icon={faStar} size="sm" color="c9c9c9" /><span>Followers <br /><p>142</p> </span> 
-                <FontAwesomeIcon icon={faHeart} size="sm" color="c9c9c9"/><span>Likes<br /><p>104</p> </span>
+              <span><FontAwesomeIcon icon={faEye} size="sm" color="c9c9c9" />views <br /><p>624</p> </span>
+              <span> <FontAwesomeIcon icon={faStar} size="sm" color="c9c9c9" />Followers <br /><p>142</p> </span> 
+              <span><FontAwesomeIcon icon={faHeart} size="sm" color="c9c9c9"/>Likes<br /><p>104</p> </span>
               </FootFlex> 
 
         
