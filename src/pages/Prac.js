@@ -4,11 +4,6 @@ import styled, { createGlobalStyle } from 'styled-components'
 import Globalstyle from '../component/Globalstyle'
 
 
-const BodyWrap= styled.body`
-width: 100%;
-height: 100%;
-background-color: black;
-`
 const MypageMenubar = styled.nav`
   width: 1300px;
   height: 100px;
@@ -17,28 +12,38 @@ const MypageMenubar = styled.nav`
   background-color: hotpink;
 `
 const MypageSideMenubar = styled.div`
-background-color: red;
+background-color: yellow;
 width: 200px;
-height: 100%;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+li{
+   
+}
+p{
+   padding: 10px;
+}
+  
+
+
 
 `
 
 const MypageButton= styled.div`
 
-width: 80px; height: 30px; background-color: #fff; 
+width: 120px; height: 30px; background-color: #fff; 
 border: 1px solid red; display: flex; justify-content: center;
-border-radius: 5px;
+border-radius: 5px; align-items: center;
+;
 
-li{
-  
-}
 `
 
 function Prac() {
   return (
   
     <>
-    <BodyWrap>
 
       <MypageMenubar>
        
@@ -55,7 +60,7 @@ function Prac() {
            <MypageButton>Menu</MypageButton>
         </li>
         <li>         
-           <MypageButton>Menu</MypageButton>       
+           <MypageButton>피드백</MypageButton>       
         </li>               
     
     </MypageMenubar>
@@ -63,31 +68,29 @@ function Prac() {
     <MypageSideMenubar>
         
         <li>         
-           <MypageButton>Menu</MypageButton>       
+           <MypageButton>내 행성 관리</MypageButton><p> -프로필 사진 수정</p> 
+           <p>-연락처 수정</p><p>-이메일 수정</p><p>-알람 설정</p>     
         </li>              
         <li>         
-           <MypageButton>Menu</MypageButton>       
+           <MypageButton>
+               내가 작성한 게시글 관리
+            </MypageButton><p>-작성한 글 관리</p><p>-작성한 피드 관리</p><p>-작성한 댓글 관리</p>      
+        </li>              
+                     
+        <li>         
+           <MypageButton>탐험가 신고 센터</MypageButton><p> -글 신고</p> 
+           <p>-피드 신고</p><p>-댓글 신고</p><p>-버그 신고 </p>       
         </li>              
         <li>         
-           <MypageButton>Menu</MypageButton>       
+           <MypageButton>혼자 여행</MypageButton>
+           <p>-블랙홀</p>       
         </li>              
         <li>         
-           <MypageButton>Menu</MypageButton>       
-        </li>              
-        <li>         
-           <MypageButton>Menu</MypageButton>       
-        </li>              
-        <li>         
-           <MypageButton>Menu</MypageButton>       
+           <MypageButton>여행객 신고</MypageButton>       
         </li>              
 
     </MypageSideMenubar>
   
-  </BodyWrap>
-    
-
-
-
    
     </>
   )

@@ -8,21 +8,23 @@ const Globalstyle = createGlobalStyle`
     *{
         box-sizing: border-box;
     }
+    html,body
+    { width: 100%; background-color: silver;}
+    
     html, body, div, span, h1, h2, h3, h4, h5, h6, p, 
     a, dl,   ul, li, form, label, table{
         margin: 0;
         padding: 0;
         border: 0;
-        font-size: 20px;
+        font-size: 12px;
         vertical-align: baseline;
     }
     body{
-      width: 100%;
-      height: 100%;
+      
         line-height: 1;
         font-family: 'Noto Sans KR', sans-serif;
-        background-color: #F6F9F0;
-        margin-bottom: 100px;
+       
+        
     }
     ol, ul, li{
         list-style: none;
